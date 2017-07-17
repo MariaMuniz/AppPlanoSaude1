@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_camara" android:icon="@android:drawable/ic_loyalt_24dp"
+        <item android:id="@+id/nav_camara" android:icon="@drawable/ic_loyalty_24dp"
             android:title="Consultar preço" />
-        <item android:id="@+id/nav_gallery" android:icon="@android:drawable/ic_menu_gallery"
+        <item android:id="@+id/nav_gallery" android:icon="@drawable/ic_hotel_24dp"
             android:title="Consultar cobertura" />
-        <item android:id="@+id/nav_slideshow" android:icon="@android:drawable/ic_menu_slideshow"
+        <item android:id="@+id/nav_slideshow" android:icon="@drawable/ic_place_24dp"
             android:title="Rede credenciada" />
-        <item android:id="@+id/nav_manage" android:icon="@android:drawable/ic_menu_manage"
+        <item android:id="@+id/nav_manage" android:icon="@drawable/ic_history_24dp"
             android:title="Consultar carencia" />
     </group>
 
