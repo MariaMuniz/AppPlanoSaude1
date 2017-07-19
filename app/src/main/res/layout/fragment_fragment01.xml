@@ -9,6 +9,70 @@
         android:layout_height="wrap_content"
         android:text="Consultar preços"
         android:id="@+id/textView2"
-        android:layout_gravity="center"
+        android:layout_gravity="right|bottom"
         android:textSize="42dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|top"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lnlPlano">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecione o plano:"
+                android:id="@+id/textView" />
+
+            <Spinner
+                android:layout_width="211dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spnPlano"
+                android:layout_gravity="right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.06"
+            android:weightSum="1"
+            android:id="@+id/lnlOperadora">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecione a operadora"
+                android:id="@+id/textView3" />
+
+            <Spinner
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spnOperadora"
+                android:layout_weight="0.45" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 </FrameLayout>
