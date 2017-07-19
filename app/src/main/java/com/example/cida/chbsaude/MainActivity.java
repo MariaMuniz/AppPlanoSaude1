@@ -14,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.SimpleAdapter;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -103,5 +106,33 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
+
+
+
+        private Spinner spn1;
+        private Plano plano;
+
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState)
+        {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+            InicializaListeners();
+            ValorPersonalizado();
+            ItemPersonalizado();
+        }
+        public void InicializaListeners()
+        {
+            spn1 = (Spinner) findViewById(R.id.spnPlano);
+            plano = new Plano();
+        }
+
+        public void ValorPersonalizado()
+        {
+            ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(this,R.layout.fragment_fragment01, plano.RetornarPlano);
+            spn1.setAdapter(arrayAdapter1);
+        }
     }
 }
