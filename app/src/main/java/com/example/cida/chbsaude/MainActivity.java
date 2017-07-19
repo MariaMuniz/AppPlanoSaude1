@@ -86,16 +86,16 @@ public class MainActivity extends AppCompatActivity
 
         int id = item.getItemId();
 
-        android.support.v4.app.FragmentManager fragmentManager=getSupportFragmentManager();
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
         if (id == R.id.nav_camara) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new com.example.cida.chbsaude.Fragment01()).commit();
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment01()).commit();
 
         } else if (id == R.id.nav_gallery) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment02()).commit();
         } else if (id == R.id.nav_slideshow) {
-            fragmentManager.beginTransaction().replace (R.id.contenedor, new com.example.cida.chbsaude.Fragment03()).commit();
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment03()).commit();
         } else if (id == R.id.nav_manage) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor,new com.example.cida.chbsaude.Fragment04()).commit();
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment04()).commit();
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -106,33 +106,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-
-
-
-
-        private Spinner spn1;
-        private Plano plano;
-
-
-        @Override
-        protected void onCreate(Bundle savedInstanceState)
-        {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            InicializaListeners();
-            ValorPersonalizado();
-            ItemPersonalizado();
-        }
-        public void InicializaListeners()
-        {
-            spn1 = (Spinner) findViewById(R.id.spnPlano);
-            plano = new Plano();
-        }
-
-        public void ValorPersonalizado()
-        {
-            ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<String>(this,R.layout.fragment_fragment01, plano.RetornarPlano);
-            spn1.setAdapter(arrayAdapter1);
-        }
     }
 }
