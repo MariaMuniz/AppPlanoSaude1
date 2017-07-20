@@ -34,18 +34,23 @@ public class Fragment01 extends Fragment {
         String [] values =
                 {"2014","2015","2016"};
         Spinner spinner = (Spinner) v.findViewById(R.id.spnPlano);
+
 /*        ArrayAdapter<String> LTRadapter = new ArrayAdapter<String>(this.getActivity(),R.layout.support_simple_spinner_dropdown_item, values);
         LTRadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(LTRadapter);*/
 
 
         List<String> categories = new ArrayList<String>();
-        categories.add("Automobile");
-        categories.add("Business Services");
-        categories.add("Computers");
-        categories.add("Education");
-        categories.add("Personal");
-        categories.add("Travel");
+        categories.add("Familiar");
+        categories.add("Empresarial");
+        categories.add("Odontológico");
+        categories.add("Ambulatorial");
+        categories.add("Individual");
+        categories.add("Adesão Alfix");
+        categories.add("Adesão Allcare");
+        categories.add("Adesão Bem beneficios");
+        categories.add("Adesão Qualicorp");
+
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, categories);
@@ -55,7 +60,25 @@ public class Fragment01 extends Fragment {
 
         // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
+        ///////
 
+        String [] values2 = {"1","2","3","4","5"};
+        Spinner spinner2 = (Spinner) v.findViewById(R.id.spnOperadora);
+
+
+        List<String> operadoras = new ArrayList<String>();
+        operadoras.add("Amil");
+        operadoras.add("Amil saúde");
+        operadoras.add("ANS");
+        operadoras.add("Bradesco saúde allcare");
+        operadoras.add("Caixa seguradora");
+        operadoras.add("Good life");
+        operadoras.add("Odontoprev");
+
+
+        ArrayAdapter<String> LTRadapter2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, operadoras);
+        LTRadapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(LTRadapter2);
 
         return v;
 
