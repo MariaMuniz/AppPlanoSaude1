@@ -26,9 +26,12 @@ import android.widget.AdapterView.OnItemSelectedListener;
 public class Fragment01 extends Fragment {
 
 
-
+    public ArrayAdapter<String> LTRadapter2;
+    public Spinner spinner2;
+    public Activity activity;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        activity = this.getActivity();
         View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
 
         String [] values =
@@ -62,8 +65,44 @@ public class Fragment01 extends Fragment {
         spinner.setAdapter(dataAdapter);
         ///////
 
+
+        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                List<String> operadoras = new ArrayList<String>();
+                if(position == 0)
+                {
+                    operadoras.add("Amil");
+                    operadoras.add("Amil saúde");
+                    operadoras.add("ANS");
+
+
+
+                }
+                if(position == 1)
+                {
+
+                    operadoras.add("Bradesco saúde allcare");
+                    operadoras.add("Caixa seguradora");
+                    operadoras.add("Good life");
+                    operadoras.add("Odontoprev");
+
+
+                }
+                ArrayAdapter adp = new ArrayAdapter<String>(activity,android.R.layout.simple_spinner_item, operadoras);
+                adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner2.setAdapter(adp);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
         String [] values2 = {"1","2","3","4","5"};
-        Spinner spinner2 = (Spinner) v.findViewById(R.id.spnOperadora);
+         spinner2 = (Spinner) v.findViewById(R.id.spnOperadora);
 
 
         List<String> operadoras = new ArrayList<String>();
@@ -76,7 +115,7 @@ public class Fragment01 extends Fragment {
         operadoras.add("Odontoprev");
 
 
-        ArrayAdapter<String> LTRadapter2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, operadoras);
+        LTRadapter2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, operadoras);
         LTRadapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(LTRadapter2);
 
