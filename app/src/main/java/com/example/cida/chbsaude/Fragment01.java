@@ -32,7 +32,7 @@ public class Fragment01 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         activity = this.getActivity();
-        View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
+        final View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
 
         String [] values =
                 {"2014","2015","2016"};
@@ -44,16 +44,15 @@ public class Fragment01 extends Fragment {
 
 
         List<String> categories = new ArrayList<String>();
-        categories.add("Familiar");
-        categories.add("Empresarial");
-        categories.add("Odontológico");
-        categories.add("Ambulatorial");
-        categories.add("Individual");
         categories.add("Adesão Alfix");
         categories.add("Adesão Allcare");
         categories.add("Adesão Bem beneficios");
         categories.add("Adesão Qualicorp");
-
+        categories.add("Ambulatorial");
+        categories.add("Empresarial");
+        categories.add("Familiar");
+        categories.add("Individual");
+        categories.add("Odontológico");
 
         // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, categories);
@@ -72,23 +71,89 @@ public class Fragment01 extends Fragment {
                 List<String> operadoras = new ArrayList<String>();
                 if(position == 0)
                 {
-                    operadoras.add("Amil");
-                    operadoras.add("Amil saúde");
-                    operadoras.add("ANS");
-
-
+                    operadoras.add("Samp");
+                    operadoras.add("Saúde Sistema");
+                    operadoras.add("Vivamed Saúde");
 
                 }
+
+                ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
+// supossing to have an image called ic_play inside my drawables.
+                myImageView.setImageResource(R.drawable.topoapp4);
+
                 if(position == 1)
                 {
 
-                    operadoras.add("Bradesco saúde allcare");
-                    operadoras.add("Caixa seguradora");
-                    operadoras.add("Good life");
-                    operadoras.add("Odontoprev");
+                    operadoras.add("Bradesco Saúde");
+                    operadoras.add("Samp");
+                    operadoras.add("Vivamed Saúde");
+                    operadoras.add("Vitallis");
+
+                }
+
+                ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
+// supossing to have an image called ic_play inside my drawables.
+                myImageView.setImageResource(R.drawable.credenciada);
+
+                if(position == 2)
+                {
+
+                    operadoras.add("Saúde Sistema");
+
+                }
+                if(position == 3)
+                {
+                    operadoras.add("Amil");
+                    operadoras.add("Bradesco Qualicorp");
+                    operadoras.add("SulAmérica");
+                    operadoras.add("Caixa Seguradora");
+
+                }
+
+                if(position == 4)
+                {
+                    operadoras.add("Ambulatorial");
 
 
                 }
+
+                if(position == 5)
+                {
+                    operadoras.add("Amil");
+                    operadoras.add("Goodlife Saúde");
+                    operadoras.add("One Health");
+                    operadoras.add("Premium Saúde");
+                    operadoras.add("Promed");
+                    operadoras.add("Samp");
+                    operadoras.add("Saúde Sistema");
+                    operadoras.add("Unimed");
+                    operadoras.add("Vitallis");
+                    operadoras.add("Vivamed Saúde");
+
+                }
+                if(position == 6)
+                {
+                    operadoras.add("Godlife Saúde");
+                    operadoras.add("Premium Saúde");
+                    operadoras.add("Unimed");
+                    operadoras.add("Vitallis");
+
+                }
+                if(position == 7)
+                {
+                    operadoras.add("Godlife Saúde");
+                    operadoras.add("Premium Saúde");
+                    operadoras.add("Unimed");
+                    operadoras.add("Vitallis");
+
+                }
+                if(position == 8)
+                {
+                    operadoras.add("Amil Dental");
+                    operadoras.add("Prevident");
+
+                }
+
                 ArrayAdapter adp = new ArrayAdapter<String>(activity,android.R.layout.simple_spinner_item, operadoras);
                 adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner2.setAdapter(adp);
@@ -107,17 +172,36 @@ public class Fragment01 extends Fragment {
 
         List<String> operadoras = new ArrayList<String>();
         operadoras.add("Amil");
-        operadoras.add("Amil saúde");
+        operadoras.add("Amil Dental");
         operadoras.add("ANS");
         operadoras.add("Bradesco saúde allcare");
-        operadoras.add("Caixa seguradora");
-        operadoras.add("Good life");
+        operadoras.add("Bradesco Saúde Qualicorp");
+        operadoras.add("Caixa Seguradora");
+        operadoras.add("Goodlife Saúde");
         operadoras.add("Odontoprev");
+        operadoras.add("One Health");
+        operadoras.add("Premium Saúde");
+        operadoras.add("Prevident");
+        operadoras.add("Promed");
+        operadoras.add("Saúde Sistema");
+        operadoras.add("Samp");
+        operadoras.add("SulAmérica");
+        operadoras.add("Unimed");
+        operadoras.add("Vitallis");
+        operadoras.add("Vivamed Saúde");
+
 
 
         LTRadapter2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, operadoras);
         LTRadapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(LTRadapter2);
+
+
+
+
+
+
+
 
         return v;
 
