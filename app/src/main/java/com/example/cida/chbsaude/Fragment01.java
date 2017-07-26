@@ -74,12 +74,11 @@ public class Fragment01 extends Fragment {
                     operadoras.add("Samp");
                     operadoras.add("Saúde Sistema");
                     operadoras.add("Vivamed Saúde");
-
+                    ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
+                    myImageView.setImageResource(R.drawable.topoapp4);
                 }
 
-                ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
-// supossing to have an image called ic_play inside my drawables.
-                myImageView.setImageResource(R.drawable.topoapp4);
+
 
                 if(position == 1)
                 {
@@ -88,17 +87,17 @@ public class Fragment01 extends Fragment {
                     operadoras.add("Samp");
                     operadoras.add("Vivamed Saúde");
                     operadoras.add("Vitallis");
+                    ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
+                    myImageView.setImageResource(R.drawable.cobert);
 
                 }
-
-                ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
-// supossing to have an image called ic_play inside my drawables.
-                myImageView.setImageResource(R.drawable.credenciada);
 
                 if(position == 2)
                 {
 
                     operadoras.add("Saúde Sistema");
+                    ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
+                    myImageView.setImageResource(R.drawable.capa);
 
                 }
                 if(position == 3)
