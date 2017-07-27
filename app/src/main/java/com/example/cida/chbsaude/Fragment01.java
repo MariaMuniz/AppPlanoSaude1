@@ -27,7 +27,7 @@ public class Fragment01 extends Fragment {
 
 
     public ArrayAdapter<String> LTRadapter2;
-    public Spinner spinner2;
+    public Spinner spinner2,spinner;
     public Activity activity;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -36,7 +36,7 @@ public class Fragment01 extends Fragment {
 
         String[] values =
                 {"2014", "2015", "2016"};
-        Spinner spinner = (Spinner) v.findViewById(R.id.spnPlano);
+        spinner = (Spinner) v.findViewById(R.id.spnPlano);
 
 /*        ArrayAdapter<String> LTRadapter = new ArrayAdapter<String>(this.getActivity(),R.layout.support_simple_spinner_dropdown_item, values);
         LTRadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
@@ -185,19 +185,97 @@ public class Fragment01 extends Fragment {
         spinner2.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                List<String> operadoras = new ArrayList<String>();
-                if (position == 0) {
-                    ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                    myImageView.setImageResource(R.drawable.samampla);
+
+                int planoSelecionado = spinner.getSelectedItemPosition();
+                int operadoraSelecionada = position;
+
+                //PLANO ADESAO ALFIX
+                if(planoSelecionado==0)
+                {
+                    //SAMP
+                    if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.samampla);
+                    }
+                    //SAUDE SISTEMA
+                    else if (operadoraSelecionada == 1) {
+
+
+
+                    }
+                    //VIVAMED SAUDE
+                    else if(operadoraSelecionada==2)
+                    {
+
+
+                    }
                 }
-                if (position == 1) {
-                    ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                    myImageView.setImageResource(R.drawable.vitallisindividual1);
+                //PLANO ADESAO ACRE
+                else if(planoSelecionado==1)
+                {
+                    //BRADESCO SAUDE
+                    if (operadoraSelecionada == 0) {
+
+
+                    }
+                    //SAMP
+                    else if (operadoraSelecionada == 1) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.samampla);
+
+                    }
+                    //VIVAMED SAUDE
+                    else if(operadoraSelecionada==2)
+                    {
+
+
+                    }
+                    //VITALIS
+                    else if(operadoraSelecionada==3)
+                    {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vitallisindividual1);
+
+                    }
+                }
+                //PLANO ADESAO BEM BENEFICIOS
+                else if(planoSelecionado==2)
+                {
 
                 }
-                ArrayAdapter adp = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, operadoras);
-                adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner2.setAdapter(adp);
+                //PLANO ADESAO QUALICORP
+                else if(planoSelecionado==3)
+                {
+
+                }
+                //PLANO AMBULATORIAL
+                else if(planoSelecionado==4)
+                {
+
+                }
+                //PLANO EMPRESARIAL
+                else if(planoSelecionado==5)
+                {
+
+                }
+                //PLANO FAMILIAR
+                else if(planoSelecionado==6)
+                {
+
+                }
+                //PLANO INDIVIDUAL
+                else if(planoSelecionado==7)
+                {
+
+                }
+                //PLANO ODONTOLOGICO
+                else if(planoSelecionado==8)
+                {
+
+                }
+
+
             }
 
             @Override
