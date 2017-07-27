@@ -32,10 +32,10 @@ public class Fragment01 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         activity = this.getActivity();
-        final View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
+       final View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
 
-        String [] values =
-                {"2014","2015","2016"};
+        String[] values =
+                {"2014", "2015", "2016"};
         Spinner spinner = (Spinner) v.findViewById(R.id.spnPlano);
 
 /*        ArrayAdapter<String> LTRadapter = new ArrayAdapter<String>(this.getActivity(),R.layout.support_simple_spinner_dropdown_item, values);
@@ -69,39 +69,28 @@ public class Fragment01 extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 List<String> operadoras = new ArrayList<String>();
-                if(position == 0)
-                {
+                if (position == 0) {
                     operadoras.add("Samp");
+
                     operadoras.add("Saúde Sistema");
+
                     operadoras.add("Vivamed Saúde");
-                    ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
-                    myImageView.setImageResource(R.drawable.topoapp4);
+
                 }
-
-
-
-                if(position == 1)
-                {
+                if (position == 1) {
 
                     operadoras.add("Bradesco Saúde");
                     operadoras.add("Samp");
                     operadoras.add("Vivamed Saúde");
                     operadoras.add("Vitallis");
-                    ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
-                    myImageView.setImageResource(R.drawable.cobert);
 
                 }
-
-                if(position == 2)
-                {
+                if (position == 2) {
 
                     operadoras.add("Saúde Sistema");
-                    ImageView myImageView = (ImageView)v.findViewById(R.id.imageView);
-                    myImageView.setImageResource(R.drawable.capa);
 
                 }
-                if(position == 3)
-                {
+                if (position == 3) {
                     operadoras.add("Amil");
                     operadoras.add("Bradesco Qualicorp");
                     operadoras.add("SulAmérica");
@@ -109,51 +98,48 @@ public class Fragment01 extends Fragment {
 
                 }
 
-                if(position == 4)
-                {
+                if (position == 4) {
                     operadoras.add("Ambulatorial");
 
 
                 }
 
-                if(position == 5)
-                {
+                if (position == 5) {
                     operadoras.add("Amil");
                     operadoras.add("Goodlife Saúde");
                     operadoras.add("One Health");
                     operadoras.add("Premium Saúde");
                     operadoras.add("Promed");
                     operadoras.add("Samp");
+                   // ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                   // myImageView.setImageResource(R.drawable.samampla);
                     operadoras.add("Saúde Sistema");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
                     operadoras.add("Vivamed Saúde");
 
                 }
-                if(position == 6)
-                {
+                if (position == 6) {
                     operadoras.add("Godlife Saúde");
                     operadoras.add("Premium Saúde");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
 
                 }
-                if(position == 7)
-                {
+                if (position == 7) {
                     operadoras.add("Godlife Saúde");
                     operadoras.add("Premium Saúde");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
 
                 }
-                if(position == 8)
-                {
+                if (position == 8) {
                     operadoras.add("Amil Dental");
                     operadoras.add("Prevident");
 
                 }
 
-                ArrayAdapter adp = new ArrayAdapter<String>(activity,android.R.layout.simple_spinner_item, operadoras);
+                ArrayAdapter adp = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, operadoras);
                 adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinner2.setAdapter(adp);
             }
@@ -165,8 +151,8 @@ public class Fragment01 extends Fragment {
         });
 
 
-        String [] values2 = {"1","2","3","4","5"};
-         spinner2 = (Spinner) v.findViewById(R.id.spnOperadora);
+        String[] values2 = {"1", "2", "3", "4", "5"};
+        spinner2 = (Spinner) v.findViewById(R.id.spnOperadora);
 
 
         List<String> operadoras = new ArrayList<String>();
@@ -190,10 +176,43 @@ public class Fragment01 extends Fragment {
         operadoras.add("Vivamed Saúde");
 
 
-
-        LTRadapter2 = new ArrayAdapter<String>(this.getActivity(),android.R.layout.simple_spinner_item, operadoras);
+        LTRadapter2 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, operadoras);
         LTRadapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(LTRadapter2);
+
+
+
+        spinner2.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                List<String> operadoras = new ArrayList<String>();
+                if (position == 0) {
+                    ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                    myImageView.setImageResource(R.drawable.samampla);
+                }
+                if (position == 1) {
+                    ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                    myImageView.setImageResource(R.drawable.vitallisindividual1);
+
+                }
+                ArrayAdapter adp = new ArrayAdapter<String>(activity, android.R.layout.simple_spinner_item, operadoras);
+                adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinner2.setAdapter(adp);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+
+
+
+
+
+
 
 
 
@@ -204,10 +223,5 @@ public class Fragment01 extends Fragment {
 
         return v;
 
-
-
-
-
-
-    }
+        }
 }
