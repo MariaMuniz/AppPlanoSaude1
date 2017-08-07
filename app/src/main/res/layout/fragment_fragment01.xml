@@ -7,7 +7,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consultar preços"
         android:id="@+id/textView2"
         android:layout_gravity="right|bottom"
         android:textSize="42dp" />
@@ -57,20 +56,38 @@
                 android:layout_width="136dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spnOperadora"
-                android:layout_weight="0.45" />
+                android:layout_weight="0.75" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"></LinearLayout>
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView" >
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3" />
+
+            </RelativeLayout>
+        </ScrollView>
+
 
     </LinearLayout>
 

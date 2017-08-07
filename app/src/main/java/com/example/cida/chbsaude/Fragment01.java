@@ -215,6 +215,8 @@ public class Fragment01 extends Fragment {
                 {
                     //BRADESCO SAUDE
                     if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vitallisindividual2);
 
 
                     }
@@ -228,6 +230,8 @@ public class Fragment01 extends Fragment {
                     //VIVAMED SAUDE
                     else if(operadoraSelecionada==2)
                     {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.unimedpleno01);
 
 
                     }
@@ -257,11 +261,59 @@ public class Fragment01 extends Fragment {
                 //PLANO EMPRESARIAL
                 else if(planoSelecionado==5)
                 {
+                    //BRADESCO SAUDE
+                    if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vitallisindividual2);
+
+
+                    }
+                    //SAMP
+                    else if (operadoraSelecionada == 9) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vivamedemp);
+
+                    }
+
+
 
                 }
                 //PLANO FAMILIAR
                 else if(planoSelecionado==6)
                 {
+
+                    //godlife
+                    if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.goodlifeouro);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.goodlifebronze);
+
+
+                    }
+                    //premium
+                    else if (operadoraSelecionada == 1) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.samampla);
+
+                    }
+                    //unimed
+                    if (operadoraSelecionada == 2) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.unimedpleno01);
+
+
+                    }
+                    //vitallis
+                    else if (operadoraSelecionada == 3) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.samampla);
+
+                    }
 
                 }
                 //PLANO INDIVIDUAL

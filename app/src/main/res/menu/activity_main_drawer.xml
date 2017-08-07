@@ -12,12 +12,12 @@
             android:title="Consultar carencia" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Comunicação">
         <menu>
             <item android:id="@+id/nav_share" android:icon="@drawable/ic_share_24dp"
-                android:title="Faceboook" />
+                android:title="Facebook" />
             <item android:id="@+id/nav_send" android:icon="@drawable/ic_phone_24dp"
-                android:title="Wadshap" />
+                android:title="WhatsApp" />
         </menu>
     </item>
 
