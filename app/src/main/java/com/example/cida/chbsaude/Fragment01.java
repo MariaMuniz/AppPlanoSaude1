@@ -1,14 +1,18 @@
 package com.example.cida.chbsaude;
 
 import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.app.Fragment;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -120,14 +124,14 @@ public class Fragment01 extends Fragment {
 
                 }
                 if (position == 6) {
-                    operadoras.add("Godlife Saúde");
+                    operadoras.add("Goodlife Saúde");
                     operadoras.add("Premium Saúde");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
 
                 }
                 if (position == 7) {
-                    operadoras.add("Godlife Saúde");
+                    operadoras.add("Goodlife Saúde");
                     operadoras.add("Premium Saúde");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
@@ -190,106 +194,269 @@ public class Fragment01 extends Fragment {
                 int operadoraSelecionada = position;
 
                 //PLANO ADESAO ALFIX
-                if(planoSelecionado==0)
-                {
+                if (planoSelecionado == 0) {
                     //SAMP
                     if (operadoraSelecionada == 0) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.samampla);
+                        myImageView.setImageResource(R.drawable.samp);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.samampla);
                     }
                     //SAUDE SISTEMA
                     else if (operadoraSelecionada == 1) {
 
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.saudesistema);
 
-
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.samampla);
                     }
                     //VIVAMED SAUDE
-                    else if(operadoraSelecionada==2)
-                    {
+                    else if (operadoraSelecionada == 2) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vivamed);
 
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.samampla);
 
                     }
                 }
                 //PLANO ADESAO ACRE
-                else if(planoSelecionado==1)
-                {
+                else if (planoSelecionado == 1) {
+
                     //BRADESCO SAUDE
                     if (operadoraSelecionada == 0) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.vitallisindividual2);
+                        myImageView.setImageResource(R.drawable.bradescosaude);
 
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
 
                     }
                     //SAMP
                     else if (operadoraSelecionada == 1) {
 
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.samampla);
+                        myImageView.setImageResource(R.drawable.samp);
 
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
                     }
                     //VIVAMED SAUDE
-                    else if(operadoraSelecionada==2)
-                    {
+                    else if (operadoraSelecionada == 2) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.unimedpleno01);
+                        myImageView.setImageResource(R.drawable.vivamed);
 
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
 
                     }
                     //VITALIS
-                    else if(operadoraSelecionada==3)
-                    {
+                    else if (operadoraSelecionada == 3) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.vitallisindividual1);
+                        myImageView.setImageResource(R.drawable.vitallis);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
 
                     }
                 }
                 //PLANO ADESAO BEM BENEFICIOS
-                else if(planoSelecionado==2)
-                {
+                else if (planoSelecionado == 2) {
 
-                }
-                //PLANO ADESAO QUALICORP
-                else if(planoSelecionado==3)
-                {
-
-                }
-                //PLANO AMBULATORIAL
-                else if(planoSelecionado==4)
-                {
-
-                }
-                //PLANO EMPRESARIAL
-                else if(planoSelecionado==5)
-                {
-                    //BRADESCO SAUDE
+                    //Saude sistema
                     if (operadoraSelecionada == 0) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.vitallisindividual2);
+                        myImageView.setImageResource(R.drawable.saudesistema);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+                    }
+                }
+                //PLANO ADESAO QUALICORP
+                else if (planoSelecionado == 3) {
+                    //Amil
+                    if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.amil);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.amiladsemcopprem400);
+
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView2.setImageResource(R.drawable.amiladsempatprem700);
+
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView3.setImageResource(R.drawable.amiladsemcopsupr400);
+
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView4.setImageResource(R.drawable.amiladsemcopsup700);
+
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.amiladcompatprem400);
+
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.amiladcompatprem700);
+
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.amiladcompatsup400);
+
+                        ImageView myImageView8 = (ImageView) v.findViewById(R.id.imageView9);
+                        myImageView8.setImageResource(R.drawable.amiladcompartsup700);
+
+                        ImageView myImageView9 = (ImageView) v.findViewById(R.id.imageView10);
+                        myImageView9.setImageResource(R.drawable.corparticipacaoamil);
 
 
                     }
-                    //SAMP
+                    //Bradesco seguros
+                    else if (operadoraSelecionada == 1) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.bradescoseguros);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //SulAmerica
+                    else if (operadoraSelecionada == 2) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.sulamerica);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Caixa
+                    else if (operadoraSelecionada == 3) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.caixa);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+                    }
+
+                }
+                //PLANO AMBULATORIAL
+                else if (planoSelecionado == 4) {
+
+                }
+                //PLANO EMPRESARIAL
+                else if (planoSelecionado == 5) {
+                    //Amil
+                    if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.amil);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+                    }
+                    //Goodlife
+                    else if (operadoraSelecionada == 1) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.goodlife);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //One Health
+                    else if (operadoraSelecionada == 2) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.onehealth);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Premium saude
+                    else if (operadoraSelecionada == 3) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.premium);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Promed
+                    else if (operadoraSelecionada == 4) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.promed);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Samp
+                    else if (operadoraSelecionada == 5) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vivamedemp);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+                    }
+                    //Saude sistema
+                    else if (operadoraSelecionada == 6) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vivamedemp);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Unimed
+                    else if (operadoraSelecionada == 7) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.unimed);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Vitallis
+                    else if (operadoraSelecionada == 8) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vitallis);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+                    }
+                    //Vivamed saude
                     else if (operadoraSelecionada == 9) {
 
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
                         myImageView.setImageResource(R.drawable.vivamedemp);
 
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+
                     }
-
-
 
                 }
                 //PLANO FAMILIAR
-                else if(planoSelecionado==6)
-                {
+                else if (planoSelecionado == 6) {
 
                     //godlife
                     if (operadoraSelecionada == 0) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.goodlifeouro);
+                        myImageView.setImageResource(R.drawable.goodlife);
 
-                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
-                        myImageView1.setImageResource(R.drawable.goodlifebronze);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView2.setImageResource(R.drawable.goodlifeouro);
+
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.goodlifebronze);
 
 
                     }
@@ -297,13 +464,20 @@ public class Fragment01 extends Fragment {
                     else if (operadoraSelecionada == 1) {
 
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.samampla);
+                        myImageView.setImageResource(R.drawable.premium);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
 
                     }
                     //unimed
                     if (operadoraSelecionada == 2) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.unimedpleno01);
+                        myImageView.setImageResource(R.drawable.unimed);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
 
 
                     }
@@ -311,19 +485,65 @@ public class Fragment01 extends Fragment {
                     else if (operadoraSelecionada == 3) {
 
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.samampla);
+                        myImageView.setImageResource(R.drawable.vitallis);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
 
                     }
 
                 }
                 //PLANO INDIVIDUAL
-                else if(planoSelecionado==7)
-                {
+                else if (planoSelecionado == 7) {
+                    //godlife
+                    if (operadoraSelecionada == 0) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.goodlife);
+
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView2.setImageResource(R.drawable.goodlifeouro);
+
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.goodlifebronze);
+
+                    }
+                    //premium
+                    else if (operadoraSelecionada == 1) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.premium);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+
+                    }
+                    //unimed
+                    if (operadoraSelecionada == 2) {
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.unimed);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+
+                    }
+                    //vitallis
+                    else if (operadoraSelecionada == 3) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.vitallis);
+
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.vitallisindividual2);
+
+
+                    }
 
                 }
                 //PLANO ODONTOLOGICO
-                else if(planoSelecionado==8)
-                {
+                else if (planoSelecionado == 8) {
 
                 }
 
@@ -336,22 +556,37 @@ public class Fragment01 extends Fragment {
             }
         });
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
 
 
 
-
-
-
-
-
-
-
-
-
-
+            private void openWhatsApp() {
+                String smsNumber = "553192524109"; //without '+'
+                try {
+                    Intent sendIntent = new Intent("android.intent.action.MAIN");
+                    //sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.setType("text/plain");
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                    sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
+                    sendIntent.setPackage("com.whatsapp");
+                    startActivity(sendIntent);
+                } catch(Exception e) {
+                    Toast.makeText(this, "Error/n" + e.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }
 
 
         return v;
 
         }
-}
+
+    
+}private void findViewById(int fab) {
+    }

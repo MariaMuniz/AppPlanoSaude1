@@ -4,12 +4,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_gravity="right|bottom"
-        android:textSize="42dp" />
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,6 +12,14 @@
         android:layout_height="match_parent"
         android:layout_gravity="left|top"
         android:weightSum="1">
+
+
+        <ImageButton
+            android:layout_width="91dp"
+            android:layout_height="53dp"
+            android:id="@+id/imageButton"
+            android:layout_gravity="right"
+            android:background="@android:color/transparent" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -86,8 +89,44 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView3" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView5" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView7" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView9" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView10" />
+
             </LinearLayout>
         </ScrollView>
+
 
 
     </LinearLayout>
