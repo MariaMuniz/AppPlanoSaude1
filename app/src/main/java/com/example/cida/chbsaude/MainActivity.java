@@ -1,6 +1,7 @@
 package com.example.cida.chbsaude;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,7 @@ import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -27,17 +29,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -109,4 +100,21 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void openWhatsApp(View v) {
+        String smsNumber = "553192524109"; //without '+'
+        try {
+            Intent sendIntent = new Intent("android.intent.action.MAIN");
+            //sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.setType("text/plain");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+            sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
+            sendIntent.setPackage("com.whatsapp");
+            startActivity(sendIntent);
+        } catch(Exception e) {
+            Toast.makeText(this, "Error/n" + e.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
