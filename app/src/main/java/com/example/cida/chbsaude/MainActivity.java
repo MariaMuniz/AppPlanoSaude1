@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void openWhatsApp(View v) {
-        String smsNumber = "553192524109"; //without '+'
+        String smsNumber = "553198680271"; //without '+'
         try {
             Intent sendIntent = new Intent("android.intent.action.MAIN");
             //sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));

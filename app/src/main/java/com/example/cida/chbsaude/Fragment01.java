@@ -58,16 +58,9 @@ public class Fragment01 extends Fragment {
         categories.add("Individual");
         categories.add("Odontológico");
 
-        // Creating adapter for spinner
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, categories);
-
-        // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // attaching data adapter to spinner
         spinner.setAdapter(dataAdapter);
-        ///////
-
 
         spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -75,9 +68,7 @@ public class Fragment01 extends Fragment {
                 List<String> operadoras = new ArrayList<String>();
                 if (position == 0) {
                     operadoras.add("Samp");
-
                     operadoras.add("Saúde Sistema");
-
                     operadoras.add("Vivamed Saúde");
 
                 }
@@ -115,8 +106,6 @@ public class Fragment01 extends Fragment {
                     operadoras.add("Premium Saúde");
                     operadoras.add("Promed");
                     operadoras.add("Samp");
-                   // ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                   // myImageView.setImageResource(R.drawable.samampla);
                     operadoras.add("Saúde Sistema");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
