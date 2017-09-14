@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment03()).commit();
         } else if (id == R.id.nav_manage) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment04()).commit();
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_telefone) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_email) {
 
         }
 
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity
             //sendIntent.setComponent(new ComponentName("com.whatsapp", "com.whatsapp.Conversation"));
             sendIntent.setAction(Intent.ACTION_SEND);
             sendIntent.setType("text/plain");
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Olá!");
             sendIntent.putExtra("jid", smsNumber + "@s.whatsapp.net"); //phone number without "+" prefix
             sendIntent.setPackage("com.whatsapp");
             startActivity(sendIntent);

@@ -14,10 +14,12 @@
 
     <item android:title="Comunicação">
         <menu>
-            <item android:id="@+id/nav_share" android:icon="@drawable/ic_share_24dp"
-                android:title="Facebook" />
-            <item android:id="@+id/nav_send" android:icon="@drawable/ic_phone_24dp"
-                android:title="WhatsApp" />
+
+            <item android:id="@+id/nav_email" android:icon="@drawable/ic_phone_24dp"
+                android:title="Telefone" />
+            <item android:id="@+id/nav_telefone" android:icon="@drawable/ic_local_post_office_24dp"
+                android:title="Email" />
+
         </menu>
     </item>
 
