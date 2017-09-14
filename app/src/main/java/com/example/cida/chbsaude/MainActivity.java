@@ -1,11 +1,16 @@
 package com.example.cida.chbsaude;
 
+import android.Manifest;
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -71,7 +76,7 @@ public class MainActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+    private static final int REQUEST_PHONE_CALL = 1;
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -91,7 +96,30 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment04()).commit();
         } else if (id == R.id.nav_telefone) {
 
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:" + "99926189"));
+            if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE},REQUEST_PHONE_CALL);
+            }
+            else
+            {
+                startActivity(intent);
+            }
+
         } else if (id == R.id.nav_email) {
+
+            Intent i = new Intent(Intent.ACTION_SENDTO);
+            i.setType("message/rfc822");
+            i.setData(Uri.parse("mailto:"));
+            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"alexsanderteste@yahoo.com.br"});
+            i.putExtra(Intent.EXTRA_SUBJECT, "assunto do email troque aqui");
+            i.putExtra(Intent.EXTRA_TEXT   , "mensagem do email troque aqui");
+
+            try {
+                startActivity(Intent.createChooser(i, "Enviar email..."));
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(this, "Não tem aplicação de email instalado.", Toast.LENGTH_SHORT).show();
+            }
 
         }
 
@@ -99,6 +127,25 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode,String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_PHONE_CALL: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    intent.setData(Uri.parse("tel:" + "99926189"));
+                    if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                        startActivity(intent);
+                    }
+                }
+                else
+                {
+
+                }
+                return;
+            }
+        }
     }
 
     public void openWhatsApp(View v) {
