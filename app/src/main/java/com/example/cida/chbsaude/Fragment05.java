@@ -27,11 +27,7 @@ public class Fragment05 extends Fragment {
         final View v = inflater.inflate(R.layout.fragment_fragment05, container, false);
 
 
-    }
 
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
 
 
         return v;
