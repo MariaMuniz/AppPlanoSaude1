@@ -25,6 +25,7 @@ public class Fragment03 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         activity = this.getActivity();
+        getActivity().setTitle("Rede credenciada");
         final View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
 
         String[] values =
@@ -117,26 +118,19 @@ public class Fragment03 extends Fragment {
                 }
 
 
+
                 if (position == 6) {
-                    operadoras.add("Amil");
-                    operadoras.add("One Health");
-                    operadoras.add("Promed");
-                    operadoras.add("Saúde Sistema");
-                    operadoras.add("Unimed");
-
-                }
-
-
-                if (position == 7) {
                     operadoras.add("Goodlife Saúde");
                     operadoras.add("Unimed");
                     operadoras.add("Vitallis");
 
                 }
 
-                if (position == 8) {
+                if (position == 7) {
                     operadoras.add("Amil Dental");
                     operadoras.add("Prevident");
+                    operadoras.add("Goodlife");
+
 
                 }
 
@@ -576,11 +570,15 @@ public class Fragment03 extends Fragment {
                         ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView1.setImageResource(R.drawable.goodlife);
                         ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
-                        myImageView2.setImageResource(R.drawable.googlifuniquegoodmp);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
                         ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
-                        myImageView3.setImageResource(R.drawable.googlifuniquemp);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
                         myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
 
                     }
                     //One Health
@@ -727,7 +725,7 @@ public class Fragment03 extends Fragment {
                     }
                 }
 
-                //Empresarial II
+                /*Empresarial II
                 else if (planoSelecionado == 6) {
                     //Amil
                     if (operadoraSelecionada == 0) {
@@ -820,81 +818,126 @@ public class Fragment03 extends Fragment {
 
 
                     }
-                }
+                }*/
 
 
                 //PLANO INDIVIDUAL
-                else if (planoSelecionado == 7) {
+                else if (planoSelecionado == 6) {
                     //godlife
                     if (operadoraSelecionada == 0) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
                         myImageView.setImageResource(R.drawable.goodlife);
 
                         ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
-                        myImageView2.setImageResource(R.drawable.goodlifeouro);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
 
-
-                    }
-                    //premium
-                    else if (operadoraSelecionada == 1) {
-
-                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                        myImageView.setImageResource(R.drawable.premium);
-
-                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
-                        myImageView1.setImageResource(R.drawable.brancomini1);
-
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView7.setImageResource(R.drawable.brancomini1);
 
                     }
                     //unimed
-                    if (operadoraSelecionada == 2) {
+                    if (operadoraSelecionada == 1) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
                         myImageView.setImageResource(R.drawable.unimed);
 
                         ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView1.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.brancomini1);
 
 
                     }
                     //vitallis
-                    else if (operadoraSelecionada == 3) {
+                    else if (operadoraSelecionada == 2) {
 
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
                         myImageView.setImageResource(R.drawable.vitallis);
 
                         ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView1.setImageResource(R.drawable.brancomini1);
-
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.brancomini1);
 
                     }
 
                 }
                 //PLANO ODONTOLOGICO
-                    else if (planoSelecionado == 9) {
-                        if (operadoraSelecionada == 0) {
+                else if (planoSelecionado == 7) {
+                    if (operadoraSelecionada == 0) {
 
-                            ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                            myImageView.setImageResource(R.drawable.amildental);
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.amildental);
 
-                            ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
-                            myImageView1.setImageResource(R.drawable.coberturaamil);
-                            ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
-                            myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView1.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
 
-                        }
-                        else if (operadoraSelecionada == 1) {
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView7.setImageResource(R.drawable.brancomini1);
 
-                            ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
-                            myImageView.setImageResource(R.drawable.previdenticone);
+                    }
+                    else if (operadoraSelecionada == 1) {
 
-                            ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
-                            myImageView2.setImageResource(R.drawable.coberturaprev1);
-                            ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
-                            myImageView3.setImageResource(R.drawable.coberturaprev2);
-                            ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
-                            myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.previdenticone);
 
-                        }
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
+
+
+
+
+                    }
+                    else if (operadoraSelecionada == 2) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.goodlife);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
+                    }
 
                 }
 

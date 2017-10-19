@@ -36,6 +36,8 @@ public class Fragment01 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         activity = this.getActivity();
+        getActivity().setTitle("Consultar preços");
+
        final View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
 
         String[] values =
@@ -138,6 +140,8 @@ public class Fragment01 extends Fragment {
                 if (position == 8) {
                     operadoras.add("Amil Dental");
                     operadoras.add("Prevident");
+                    operadoras.add("Goodlife");
+
 
                 }
 
@@ -205,8 +209,20 @@ public class Fragment01 extends Fragment {
 
                         ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView1.setImageResource(R.drawable.sampadesaoemp);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView2.setImageResource(R.drawable.miniespace);
                         ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
-                        myImageView3.setImageResource(R.drawable.brancomini);
+                        myImageView3.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView4.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.miniespace);
+
+
                     }
                     //SAUDE SISTEMA
                     else if (operadoraSelecionada == 1) {
@@ -365,7 +381,6 @@ public class Fragment01 extends Fragment {
                         myImageView6.setImageResource(R.drawable.brancomini);
                         ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
                         myImageView7.setImageResource(R.drawable.brancomini);
-
 
 
                     }
@@ -552,7 +567,6 @@ public class Fragment01 extends Fragment {
                         myImageView8.setImageResource(R.drawable.brancomini1);
 
 
-
                     }
 
                     if (operadoraSelecionada == 1) {
@@ -576,8 +590,6 @@ public class Fragment01 extends Fragment {
                         myImageView7.setImageResource(R.drawable.brancomini1);
 
 
-
-
                     }
 
                     //goodlife
@@ -599,6 +611,10 @@ public class Fragment01 extends Fragment {
 
                         ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
                         myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.brancomini1);
 
 
                     }
@@ -798,9 +814,9 @@ public class Fragment01 extends Fragment {
                         ImageView myImageView1 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView1.setImageResource(R.drawable.vivamedemp);
                         ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
-                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        myImageView2.setImageResource(R.drawable.vivamedempresa1);
                         ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
-                        myImageView3.setImageResource(R.drawable.brancomini);
+                        myImageView3.setImageResource(R.drawable.vivamedempresaplus2);
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
                         myImageView4.setImageResource(R.drawable.brancomini);
                         ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
@@ -948,8 +964,9 @@ public class Fragment01 extends Fragment {
 
 
                 //PLANO INDIVIDUAL
+                //godlife
                 else if (planoSelecionado == 7) {
-                    //godlife
+
                     if (operadoraSelecionada == 0) {
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
                         myImageView.setImageResource(R.drawable.goodlife);
@@ -962,6 +979,16 @@ public class Fragment01 extends Fragment {
 
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
                         myImageView4.setImageResource(R.drawable.brancomini1);
+
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView5.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView6.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView7.setImageResource(R.drawable.brancomini);
+                        ImageView myImageView8 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView8.setImageResource(R.drawable.brancomini);
+
 
                     }
 
@@ -978,6 +1005,12 @@ public class Fragment01 extends Fragment {
                         myImageView3.setImageResource(R.drawable.unipart1flex050);
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
                         myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.brancomini);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.brancomini);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.brancomini);
 
 
                     }
@@ -995,6 +1028,15 @@ public class Fragment01 extends Fragment {
                         myImageView3.setImageResource(R.drawable.brancomini1);
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
                         myImageView4.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView5.setImageResource(R.drawable.brancomini);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView6.setImageResource(R.drawable.brancomini);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView7.setImageResource(R.drawable.brancomini);
+
+
+
 
                     }
 
@@ -1011,7 +1053,7 @@ public class Fragment01 extends Fragment {
                         ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView3);
                         myImageView2.setImageResource(R.drawable.amilfamiliar1);
                         ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView4);
-                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        myImageView3.setImageResource(R.drawable.miniespace);
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView5);
                         myImageView4.setImageResource(R.drawable.noboletoamil);
                         ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView6);
@@ -1019,37 +1061,66 @@ public class Fragment01 extends Fragment {
                         ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView7);
                         myImageView6.setImageResource(R.drawable.empresa29);
                         ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView8);
-                        myImageView7.setImageResource(R.drawable.brancomini1);
+                        myImageView7.setImageResource(R.drawable.miniespace);
                         ImageView myImageView8 = (ImageView) v.findViewById(R.id.imageView9);
                         myImageView8.setImageResource(R.drawable.empresarial99);
 
 
-
-                    }
-                    else if (operadoraSelecionada == 1) {
+                    } else if (operadoraSelecionada == 1) {
 
                         ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
                         myImageView.setImageResource(R.drawable.previdenticone);
                         ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView2.setImageResource(R.drawable.previdentdiamond);
                         ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
-                        myImageView3.setImageResource(R.drawable.platinum);
+                        myImageView3.setImageResource(R.drawable.miniespace);
                         ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
-                        myImageView4.setImageResource(R.drawable.previdenteouro);
+                        myImageView4.setImageResource(R.drawable.platinum);
+                        ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView5);
+                        myImageView5.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView6);
+                        myImageView6.setImageResource(R.drawable.previdenteouro);
+                        ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView7);
+                        myImageView7.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView8 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView8.setImageResource(R.drawable.miniespace);
+                        ImageView myImageView9 = (ImageView) v.findViewById(R.id.imageView9);
+                        myImageView9.setImageResource(R.drawable.miniespace);
+
+
+
+
+                    } else if (operadoraSelecionada == 2) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.goodlife);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.goodlifeodontoind1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView4.setImageResource(R.drawable.goodlifeodontoind2);
                         ImageView myImageView5 = (ImageView) v.findViewById(R.id.imageView5);
                         myImageView5.setImageResource(R.drawable.brancomini1);
                         ImageView myImageView6 = (ImageView) v.findViewById(R.id.imageView6);
                         myImageView6.setImageResource(R.drawable.brancomini1);
                         ImageView myImageView7 = (ImageView) v.findViewById(R.id.imageView7);
                         myImageView7.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView8 = (ImageView) v.findViewById(R.id.imageView8);
+                        myImageView8.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView9 = (ImageView) v.findViewById(R.id.imageView9);
+                        myImageView9.setImageResource(R.drawable.brancomini1);
+
+
 
 
                     }
-
                 }
+
             }
 
-            @Override
+
+        @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }

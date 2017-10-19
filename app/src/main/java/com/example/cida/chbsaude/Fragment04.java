@@ -21,6 +21,7 @@ public class Fragment04 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         activity = this.getActivity();
+        getActivity().setTitle("Consultar carencia");
         final View v = inflater.inflate(R.layout.fragment_fragment01, container, false);
 
         String [] values =
@@ -131,6 +132,8 @@ public class Fragment04 extends Fragment {
                             if (position == 8) {
                                 operadoras.add("Amil Dental");
                                 operadoras.add("Prevident");
+                                operadoras.add("Goodlife");
+
 
                             }
 
@@ -534,6 +537,17 @@ public class Fragment04 extends Fragment {
                         ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
                         myImageView2.setImageResource(R.drawable.carenciaprevidente);
 
+                    }
+                     else if (operadoraSelecionada == 2) {
+
+                        ImageView myImageView = (ImageView) v.findViewById(R.id.imageView);
+                        myImageView.setImageResource(R.drawable.goodlife);
+                        ImageView myImageView2 = (ImageView) v.findViewById(R.id.imageView2);
+                        myImageView2.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView3 = (ImageView) v.findViewById(R.id.imageView3);
+                        myImageView3.setImageResource(R.drawable.brancomini1);
+                        ImageView myImageView4 = (ImageView) v.findViewById(R.id.imageView4);
+                        myImageView4.setImageResource(R.drawable.brancomini1);
                     }
 
 

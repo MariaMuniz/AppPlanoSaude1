@@ -13,19 +13,6 @@
         android:layout_gravity="left|top"
         android:weightSum="1">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Veja"
-                android:textSize="22dp"
-                android:id="@+id/textView4" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -65,7 +52,7 @@
                 android:layout_width="136dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/spnOperadora"
-                android:layout_weight="0.75" />
+                android:layout_weight="0.39" />
 
         </LinearLayout>
 
@@ -77,6 +64,7 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
+                android:gravity="center"
                 android:layout_height="match_parent">
 
 

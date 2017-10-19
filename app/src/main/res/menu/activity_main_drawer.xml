@@ -10,6 +10,9 @@
             android:title="Rede credenciada" />
         <item android:id="@+id/nav_manage" android:icon="@drawable/ic_history_24dp"
             android:title="Consultar carencia" />
+        <item android:id="@+id/nav_simula" android:icon="@drawable/ic_person_24dp"
+            android:title="Simular preços" />
+
     </group>
 
     <item android:title="Comunicação">

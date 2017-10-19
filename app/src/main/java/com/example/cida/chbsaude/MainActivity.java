@@ -43,6 +43,15 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();
+
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment01()).commit();
+
+
+        navigationView.getMenu().getItem(0).setChecked(true);
+
     }
 
     @Override
@@ -93,11 +102,18 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment03()).commit();
         } else if (id == R.id.nav_manage) {
+
             fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment04()).commit();
-        } else if (id == R.id.nav_telefone) {
+
+
+          } else if (id == R.id.nav_simula) {
+
+              fragmentManager.beginTransaction().replace(R.id.contenedor, new com.example.cida.chbsaude.Fragment05()).commit();
+
+          }else if (id == R.id.nav_telefone) {
 
             Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:" + "99926189"));
+            intent.setData(Uri.parse("tel:" + "998680271"));
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE},REQUEST_PHONE_CALL);
             }
@@ -111,9 +127,9 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(Intent.ACTION_SENDTO);
             i.setType("message/rfc822");
             i.setData(Uri.parse("mailto:"));
-            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"alexsanderteste@yahoo.com.br"});
-            i.putExtra(Intent.EXTRA_SUBJECT, "assunto do email troque aqui");
-            i.putExtra(Intent.EXTRA_TEXT   , "mensagem do email troque aqui");
+            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{"henrique@chbsaude.com.br"});
+            i.putExtra(Intent.EXTRA_SUBJECT, "Plano de saude");
+            i.putExtra(Intent.EXTRA_TEXT   , "Olá!");
 
             try {
                 startActivity(Intent.createChooser(i, "Enviar email..."));
@@ -134,7 +150,7 @@ public class MainActivity extends AppCompatActivity
             case REQUEST_PHONE_CALL: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Intent intent = new Intent(Intent.ACTION_CALL);
-                    intent.setData(Uri.parse("tel:" + "99926189"));
+                    intent.setData(Uri.parse("tel:" + "998680271"));
                     if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
                         startActivity(intent);
                     }
